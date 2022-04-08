@@ -1,0 +1,21 @@
+#:import hex kivy.utils.get_color_from_hex
+
+<Tela>:
+	orientation: 'vertical'
+	id: container
+	
+	MDToolbar:
+		title: "MDTopAppBar"
+		right_action_items:  [["dots-vertical", lambda x: app.callback_1()]]
+		left_action_items: [["menu", lambda x: app.callback_2()]]
+	
+	MDBoxLayout:
+	
+		
+		MDLabel:
+			text: root.device
+			halign: 'center'
+		
+	
+		
+		

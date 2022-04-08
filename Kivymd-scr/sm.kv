@@ -1,0 +1,35 @@
+<MenuScreen>:
+    MDBoxLayout:
+        orientation: "vertical"
+        
+        MDToolbar:
+        	title: "Inicio"
+        
+        MDBoxLayout:
+        	MDRaisedButton:
+            	text: 'Goto settings'
+            	on_press: root.manager.current = 'settings'
+            
+        
+        	MDFlatButton:
+            	text: 'Quit'
+        
+        MDBoxLayout:
+
+<SettingsScreen>:
+    MDBoxLayout:
+        orientation: "vertical"
+        
+        MDToolbar:
+        	title: "Configurações"
+        	right_action_items: [["dots-vertical", lambda x="t": app.chamada(x) ],]
+        	
+        MDFlatButton:
+            text: 'My settings button'
+            
+        MDFlatButton:
+            text: 'Back to menu'
+            
+            on_press: root.manager.current = 'menu'
+            
+        MDBoxLayout:
