@@ -24,7 +24,7 @@ store.put('Ziel', name='Jesiel', age=21)
 # or guess the key/entry for a part of the key
 #key, tshirtman = store.find(name='Gabriel')
 #print('tshirtman is', tshirtman)
-res = store.find()
+
 for item in res:
     #print("Nome=", str(item))
     print('Nome: ', str(item[1]['name']))

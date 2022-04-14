@@ -1,0 +1,24 @@
+<Screen>:
+    on_leave: app.previous_screen = self.name
+
+<Home>:
+    name: "home_screen"
+    GridLayout:
+        cols: 1
+        padding: 10
+        Button:
+            text: "To User Screen"
+            on_release: root.manager.current = "user_screen"
+
+<User>:
+    name: "user_screen"
+    GridLayout:
+        cols: 1
+        padding: 10
+        Button:
+            text: "Back"
+            on_release: root.manager.current = app.previous_screen
+
+<RootWidget>:
+    Home
+    User
